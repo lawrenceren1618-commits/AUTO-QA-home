@@ -1,0 +1,9 @@
+# secrets — canonical file is env/.env (this root file must stay so git still ignores)
+env/.env
+.env
+*.env.local
+output/*
+!output/.gitkeep
+__pycache__/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+---
+description: Local-first git. Push to GitHub only when the user says PUSH.
+alwaysApply: true
+---
+
+# GitHub 同步
+
+优先在本地改、本地提交。**不要**自行 `git push`。
+
+只有用户明确说 **PUSH**（或「推送到 GitHub」）时，才把已提交的本地提交推到 `origin`。
+
+- 未说 PUSH：可以 `git status` / `git diff` / 按要求 `commit`；禁止 push
+- 说了 PUSH：`git push -u origin HEAD`（或当前跟踪分支）；禁止 `--force` 到 main/master
+- 密钥不进 Git：`env/.env` 已在 gitignore
